@@ -1,11 +1,9 @@
--- @description Smart split  at mouse cursor (preserve fade In / Out)
--- @version 1.0
+-- @description dave_Smart split  at mouse cursor (preserve fade In / Out)
+-- @version 0.1
 -- @author dave
--- @about
---   # Your Package Title
---   Longer description/documentation for this package in *markdown*.
 -- @changelog
 --   + Initial release
+
 
 
 local function SaveSelectedItems (table)

@@ -1,19 +1,12 @@
---[[
- * ReaScript Name: dave_Smart toggle within fade shapes in item at mouse cursor 
- * Description: left half of item = fade in / right half = fade out
- * Version: 0.1
- * Author: dave
- * Repository URI: https://github.com/theyv/dave_ReaScript
- --]]
+
+-- @description  dave_Smart toggle within fade shapes in item at mouse cursor 
+-- @version 0.1
+-- @author dave
+-- @changelog
+-- Repository URI https://github.com/theyv/ReaScripts
+--   + Initial release
 
 
---[[
- * Changelog:
-  
- * v0.1 - May 8 2018
-    + initial release
-    --]]
-    
 function main()
 	reaper.Main_OnCommand(40289,1)
 	reaper.BR_GetMouseCursorContext()

@@ -1,19 +1,9 @@
---[[
- * ReaScript Name: dave_Smart Fade In / Out at mouse cursor
- * Description: way to quickly put a fade in / out 
- * Version: 0.1
- * Author: dave
- * Repository URI: https://github.com/theyv/dave_ReaScript
- --]]
-
-
---[[
- * Changelog:
-  
- * v0.1 - May 8 2018
-    + initial release
-    --]]
-
+-- @description  dave_Smart Fade In / Out at mouse cursor
+-- @version 0.1
+-- @author dave
+-- @changelog
+-- Repository URI https://github.com/theyv/ReaScripts
+--   + Initial release
 
     function main()
       reaper.BR_GetMouseCursorContext()
