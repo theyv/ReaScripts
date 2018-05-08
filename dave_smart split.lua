@@ -17,7 +17,7 @@ local function RestoreSelectedItems (table)
   reaper.Main_OnCommand(40289, 0) -- Unselect all items
   for _, item in ipairs(table) do
   	tempitem =  reaper.BR_GetMediaItemByGUID( 0, item )
-  	if   tempitem ~= nil then 
+  	if   tempitem >10 then 
   		reaper.SetMediaItemSelected(item, true)
 
   	end
@@ -43,8 +43,8 @@ function main()
 		if ((len/2) >  pos_cur - pos) then 
  reaper.Main_OnCommand(40748,1) -- split andselect right
  local itemright =  reaper.GetSelectedMediaItem( 0,0 )
- reaper.SetMediaItemInfo_Value(itemright, 'D_FADEINLEN_AUTO', -1)
- reaper.SetMediaItemInfo_Value(itemright, 'D_FADEINLEN', 0.100)
+ reaper.SetMediaItemInfo_Value(itemright, 'D_FADEINLEN_AUTO', fadeinautobef)
+ reaper.SetMediaItemInfo_Value(itemright, 'D_FADEINLEN', fadeinbef)
  reaper.DeleteTrackMediaItem( tr, item )
 else
 	local item = reaper.BR_GetMouseCursorContext_Item()
@@ -56,7 +56,7 @@ else
 	local itemright =  reaper.GetSelectedMediaItem( 0,0 )
 	reaper.DeleteTrackMediaItem( tr, itemright )
 end
-RestoreSelectedItems(init_sel_items)
+-- RestoreSelectedItems(init_sel_items)
 reaper.UpdateArrange()
 end
 end
